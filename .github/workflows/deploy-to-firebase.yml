@@ -1,7 +1,17 @@
-name: Build and Deploy
+name: Create envfile, Build and Deploy
 on: [push]
 
 jobs:
+  create-envfile:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Make envfile
+      uses: SpicyPizza/create-envfile@v1
+      with:
+        envkey_DEBUG: false
+        envkey_CLIENT_ID_PP: ${{secrets.CLIENT_ID_PP}}
+        envkey_MAPS_API_KEY: ${{secrets.MAPS_API_KEY}}
+        some_other_variable: foobar
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -17,9 +27,6 @@ jobs:
         with:
           name: dist
           path: dist
-        env:
-          CLIENT_ID_PP: ${{secrets.CLIENT_ID_PP}}
-          MAPS_API_KEY: ${{secrets.MAPS_API_KEY}}  
   deploy:
     name: Deploy
     needs: build
