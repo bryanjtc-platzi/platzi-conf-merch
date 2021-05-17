@@ -17,6 +17,9 @@ jobs:
         with:
           name: dist
           path: dist
+        env:
+          CLIENT_ID_PP: ${{secrets.CLIENT_ID_PP}}
+          MAPS_API_KEY: ${{secrets.MAPS_API_KEY}}  
   deploy:
     name: Deploy
     needs: build
