@@ -15,6 +15,8 @@
   "author": "Bryan <bryan.thomas25000@icloud.com>",
   "license": "ISC",
   "dependencies": {
+    "@react-google-maps/api": "^2.1.1",
+    "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.25.0",
     "eslint-config-airbnb": "^18.2.1",
