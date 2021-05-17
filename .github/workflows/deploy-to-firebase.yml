@@ -16,6 +16,7 @@ jobs:
           envkey_DEBUG: false
           envkey_CLIENT_ID_PP: ${{secrets.CLIENT_ID_PP}}
           envkey_MAPS_API_KEY: ${{secrets.MAPS_API_KEY}}
+          directory: <directory_name>
       - name: Build
         run: npm run build
       - name: Archive Production Artifact
