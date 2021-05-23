@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import shortid from 'shortid';
@@ -27,7 +29,7 @@ const Checkout = () => {
               <span>{item.price}</span>
             </div>
             <button type="button" onClick={handleRemove(item, itemNumber)}>
-              <i className="fas fa-trash-alt" title="eliminar" />
+              <FontAwesomeIcon icon={faShoppingBasket} />
             </button>
           </div>
         ))}

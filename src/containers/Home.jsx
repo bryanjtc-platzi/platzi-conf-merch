@@ -12,15 +12,16 @@ const Home = () => (
       <meta name="twitter:creator" content="@TU_USER" />
       <meta name="twitter:title" content="Platzi Conf Store" />
       <meta name="twitter:description" content="Platzi Conf Store" />
+      <meta name="description" content="Pagina para platzi conf merch" />
       <meta
         name="twitter:image"
-        content="https://s3.amazonaws.com/gndx.dev/gndxdev.png"
+        content="https://abdujnqfiq.cloudimg.io/v7/s3.amazonaws.com/gndx.dev/gndxdev.png"
       />
       <meta property="og:title" content="Platzi Conf Store" />
       <meta property="og:description" content="Platzi Conf Store" />
       <meta
         property="og:image"
-        content="https://s3.amazonaws.com/gndx.dev/gndxdev.png"
+        content="https://abdujnqfiq.cloudimg.io/v7/s3.amazonaws.com/gndx.dev/gndxdev.png"
       />
       <meta property="og:url" content="platzistore.xyz" />
       <meta property="og:site_name" content="Platzi Conf Store" />
