@@ -46,7 +46,7 @@
     "dotenv-webpack": "^7.0.2",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^7.0.2",
+    "husky": "^7.0.4",
     "mini-css-extract-plugin": "^2.4.3",
     "source-map-loader": "^3.0.0",
     "webpack": "^5.55.1",
