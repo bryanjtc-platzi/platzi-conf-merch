@@ -8,8 +8,8 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     env:
-        CLIENT_ID_PP: ${{secrets.CLIENT_ID_PP}}
-        MAPS_API_KEY: ${{secrets.MAPS_API_KEY}}
+        REACT_APP_CLIENT_ID_PP: ${{secrets.CLIENT_ID_PP}}
+        REACT_APP_MAPS_API_KEY: ${{secrets.MAPS_API_KEY}}
     steps:
       - uses: actions/checkout@v2
       - run: npm ci && npm run build
