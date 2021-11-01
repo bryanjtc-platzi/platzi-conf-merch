@@ -9,9 +9,6 @@ name: Deploy to Firebase Hosting on merge
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-    env:
-        REACT_APP_CLIENT_ID_PP: ${{secrets.CLIENT_ID_PP}}
-        REACT_APP_MAPS_API_KEY: ${{secrets.MAPS_API_KEY}}
     steps:
       - uses: actions/checkout@v2
       - run: npm ci && npm run build

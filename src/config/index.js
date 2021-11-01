@@ -1,6 +1,8 @@
+const functions = require('firebase-functions');
+
 const config = {
-  clientIdPaypal: String(process.env.CLIENT_ID_PP),
-  googleMapsApiKey: String(process.env.MAPS_API_KEY),
+  clientIdPaypal: functions.config().client_id_pp.key,
+  googleMapsApiKey: functions.config().maps_api_key.key,
 };
 
 export default config;
