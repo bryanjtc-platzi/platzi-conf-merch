@@ -70,7 +70,7 @@ module.exports = {
       filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css',
     }),
-    new Dotenv(),
+    new Dotenv({ systemvars: true }),
     new CopyPlugin({
       patterns: [
         { from: 'public/manifest.json', to: '' },
