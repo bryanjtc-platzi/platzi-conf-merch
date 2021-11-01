@@ -6,7 +6,7 @@ import { PayPalButton } from 'react-paypal-button-v2';
 import AppContext from '../context/AppContext';
 import '../styles/components/Payment.css';
 import { handleSumTotal } from '../utils/index';
-import config from '../config/index';
+import config from '../../functions/config/index';
 
 const Payment = () => {
   const { state, addNewOrder } = useContext(AppContext);
