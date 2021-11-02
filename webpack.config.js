@@ -78,7 +78,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    compress: true,
+    compress: false,
     historyApiFallback: true,
     port: 3005,
   },
@@ -86,5 +86,8 @@ module.exports = {
     hints: false,
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
+  },
+  experiments: {
+    topLevelAwait: true,
   },
 };
