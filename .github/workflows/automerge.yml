@@ -4,19 +4,17 @@ on:
   pull_request:
 
 jobs:
-  build_and_preview:
-    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - uses: actions/setup-node@v2
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PLATZI_CONF_MERCH_313921 }}'
-          projectId: platzi-conf-merch-313921
+          node-version: 14.x
+      - run: npm ci
+      - run: npm run build
   automerge:
-    needs: build_and_preview
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: fastify/github-action-merge-dependabot@v2.1.1
