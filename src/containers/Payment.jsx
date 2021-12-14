@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React, { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import shortid from 'shortid';
 import { PayPalButton } from 'react-paypal-button-v2';
 import AppContext from '../context/AppContext';
@@ -12,7 +12,7 @@ const Payment = () => {
   const { state, addNewOrder } = useContext(AppContext);
   const { cart, buyer } = state;
   const { clientIdPaypal } = config;
-  const history = useHistory();
+  const history = useNavigate();
   const options = {
     clientId: clientIdPaypal,
     intent: 'capture',
