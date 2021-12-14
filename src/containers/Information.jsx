@@ -1,13 +1,13 @@
 import React, { useRef, useContext } from 'react';
 import shortid from 'shortid';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import '../styles/components/Information.css';
 
 const Information = () => {
   const { state, addToBuyer } = useContext(AppContext);
   const form = useRef(null);
-  const history = useHistory();
+  const history = useNavigate();
   const { cart } = state;
   const handleSubmit = () => {
     const formData = new FormData(form.current);
