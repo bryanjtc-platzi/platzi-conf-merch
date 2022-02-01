@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import shortid from 'shortid';
+import { nanoid } from 'nanoid';
 import '../styles/components/Checkout.css';
 import AppContext from '../context/AppContext';
 import { handleSumTotal } from '../utils/index';
@@ -22,7 +22,7 @@ const Checkout = () => {
         {cart.map((item, itemNumber) => (
           <div
             className="Checkout-item"
-            key={`${item.id}_${shortid.generate()}`}
+            key={`${item.id}_${nanoid()}`}
           >
             <div className="Checkout-element">
               <h4>{item.title}</h4>

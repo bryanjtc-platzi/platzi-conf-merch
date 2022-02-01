@@ -24,19 +24,25 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('install', (event) => {
   if (doCache) {
-    event.waitUntil(
-      caches.open(CACHE_NAME).then((cache) => {
-        fetch('manifest.json')
-          .then((response) => {
-            response.json();
+    event
+      .waitUntil(
+        caches
+          .open(CACHE_NAME)
+          .then((cache) => {
+            fetch('manifest.json')
+              .then((response) => {
+                response.json();
+              })
+              .then((assets) => {
+                const urlsToCache = ['/', assets['bundle.js']];
+                cache.addAll(urlsToCache);
+                console.log('cached');
+              })
+              .catch((error) => console.log(error));
           })
-          .then((assets) => {
-            const urlsToCache = ['/', assets['bundle.js']];
-            cache.addAll(urlsToCache);
-            console.log('cached');
-          });
-      })
-    );
+          .catch((error) => console.log(error))
+      )
+      .catch((error) => console.log(error));
   }
 });
 

@@ -1,5 +1,5 @@
 import React, { useRef, useContext } from 'react';
-import shortid from 'shortid';
+import { nanoid } from 'nanoid';
 import { Link, useNavigate } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import '../styles/components/Information.css';
@@ -59,7 +59,7 @@ const Information = () => {
       <div className="Information-sidebar">
         <h3>Pedido</h3>
         {cart.map((item) => (
-          <div className="Information-item" key={`${item.id}_${shortid.generate()}`}>
+          <div className="Information-item" key={`${item.id}_${nanoid()}`}>
             <div className="Information-element">
               <h4>{item.title}</h4>
               <span>${item.price}</span>
