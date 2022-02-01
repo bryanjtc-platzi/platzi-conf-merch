@@ -18,7 +18,7 @@
     "@babel/runtime": "^7.16.7",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@fortawesome/react-fontawesome": "^0.1.17",
     "@react-google-maps/api": "^2.7.0",
     "axios": "^0.24.0",
     "babel-eslint": "^10.1.0",
