@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import shortid from 'shortid';
+import { nanoid } from 'nanoid';
 import { PayPalButton } from 'react-paypal-button-v2';
 import AppContext from '../context/AppContext';
 import '../styles/components/Payment.css';
@@ -39,7 +39,7 @@ const Payment = () => {
         {cart.map((item) => (
           <div
             className="Payment-item"
-            key={`${item.id}_${shortid.generate()}`}
+            key={`${item.id}_${nanoid()}`}
           >
             <div className="Payment-element">
               <h4>{item.title}</h4>
