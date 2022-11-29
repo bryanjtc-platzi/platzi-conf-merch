@@ -48,7 +48,7 @@
     "html-loader": "4.2.0",
     "html-webpack-plugin": "5.5.0",
     "husky": "8.0.2",
-    "mini-css-extract-plugin": "2.7.0",
+    "mini-css-extract-plugin": "2.7.1",
     "source-map-loader": "4.0.1",
     "webpack": "5.75.0",
     "webpack-bundle-analyzer": "4.7.0",
