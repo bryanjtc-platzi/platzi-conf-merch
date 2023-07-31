@@ -1,23 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
-  "automerge": true,
-  "platformAutomerge": true,
-  "rebaseWhen": "behind-base-branch",
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true,
-    "automergeType": "pr",
-    "platformAutomerge": true
-  },
-  "schedule": ["monthly"],
-  "packageRules": [
-    {
-      "groupName": "all patch dependencies",
-      "groupSlug": "all-patch",
-      "matchUpdateTypes": ["patch"]
-    }
-  ],
+  "enabled": false
 }
